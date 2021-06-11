@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/LoginToolbarStyle"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/backArrowRegPage"
+                    style="@style/BackButtonStyle"
+                    android:contentDescription="@string/image_desc_icon" />
+
+                <TextView
+                    android:id="@+id/toolbarTitle"
+                    style="@style/ToolbarTitleStyle"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="@dimen/margin_ultra_larger"
+                    android:layout_marginTop="14dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/new_user_registration" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/llContentHeader"
+                style="@style/LoginContentHeaderParentStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/archelonLogo"
+
+                    style="@style/LoginLogoStyle"
+                    android:contentDescription="@string/archelonlogo"
+                    android:src="@drawable/archelon_logo" />
+
+                <TextView
+                    style="@style/LoginTitleStyle"
+                    android:text="@string/archelon" />
+
+                <TextView
+                    style="@style/LoginSubTitleStyle"
+                    android:text="@string/app_full_title" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/inputParent"
+                style="@style/BaseCardViewStyle"
+                app:cardElevation="@dimen/elevation_extra_small"
+                app:layout_constraintBottom_toTopOf="@id/btnSignUp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llContentHeader">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_large">
+
+                    <TextView
+                        style="@style/LoginLabelStyle"
+                        android:text="@string/first_name" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintEnabled="false">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/firstName"
+                            android:maxLines="1"
+                            style="@style/LoginEditTextStyle" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        style="@style/LoginLabelStyle"
+                        android:layout_marginTop="@dimen/margin_large"
+                        android:text="@string/email" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintEnabled="false">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/emailAddress"
+                            android:maxLines="1"
+                            style="@style/LoginEditTextStyle"
+                            android:inputType="textEmailAddress" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        style="@style/LoginLabelStyle"
+                        android:layout_marginTop="@dimen/margin_large"
+                        android:text="@string/username" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintEnabled="false">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/newUsername"
+                            android:maxLines="1"
+                            style="@style/LoginEditTextStyle" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        style="@style/LoginLabelStyle"
+                        android:layout_marginTop="@dimen/margin_large"
+                        android:text="@string/password" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintEnabled="false"
+                        app:passwordToggleEnabled="true"
+                        app:passwordToggleTint="?attr/colorBgPrimary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/password"
+                            style="@style/LoginEditTextStyle"
+                            android:inputType="textPassword" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btnSignUp"
+                style="@style/LoginButtonStyle"
+                android:text="@string/sign_up"
+                app:layout_constraintBottom_toTopOf="@id/alreadyHaveAccount"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/inputParent" />
+
+            <LinearLayout
+                android:id="@+id/alreadyHaveAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_extra_large"
+                android:layout_marginBottom="@dimen/margin_extra_large"
+                android:gravity="center_horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnSignUp">
+
+                <TextView
+                    android:id="@+id/tvLoginText1"
+                    style="@style/LoginTextStyle"
+                    android:text="@string/already_have_account" />
+
+                <TextView
+                    android:id="@+id/loginLinkRegPage"
+                    style="@style/LoginClickableTextStyle"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:text="@string/login" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

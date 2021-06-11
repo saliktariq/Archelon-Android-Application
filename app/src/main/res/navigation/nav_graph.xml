@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.saliktariq.archelon.ui.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/login_fragment">
+        <action
+            android:id="@+id/action_loginFragment_to_homeScreen"
+            app:destination="@id/homeScreen" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgetPassword"
+            app:destination="@id/forgetPassword" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerNewUser"
+            app:destination="@id/registerNewUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerNewUser"
+        android:name="com.saliktariq.archelon.ui.login.RegisterNewUser"
+        android:label="RegisterNewUser"
+        tools:layout="@layout/register_new_user_fragment">
+
+
+        <action
+            android:id="@+id/action_registerNewUser_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgetPassword"
+        android:name="com.saliktariq.archelon.ui.login.ForgetPassword"
+        android:label="ForgetPassword"
+        tools:layout="@layout/forget_password_fragment">
+        <action
+            android:id="@+id/action_forgetPassword_to_newPassword"
+            app:destination="@id/newPassword" />
+        <action
+            android:id="@+id/action_forgetPassword_to_registerNewUser"
+            app:destination="@id/registerNewUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/newPassword"
+        android:name="com.saliktariq.archelon.ui.login.NewPassword"
+        android:label="NewPassword"
+        tools:layout="@layout/new_password_fragment">
+        <action
+            android:id="@+id/action_newPassword_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_newPassword_to_registerNewUser"
+            app:destination="@id/registerNewUser" />
+        <deepLink
+            android:id="@+id/deepLink3"
+            app:uri="archelon.saliktariq.com" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="com.saliktariq.archelon.ui.firstscreen.ApplicationHomeScreenFragment"
+        android:label="home_screen_fragment"
+        tools:layout="@layout/home_screen_fragment" >
+        <action
+            android:id="@+id/action_homeScreen_to_startNewSurvey"
+            app:destination="@id/startNewSurvey" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_loginFragment"
+        app:destination="@id/loginFragment" />
+    <fragment
+        android:id="@+id/startNewSurvey"
+        android:name="com.saliktariq.archelon.ui.newsurvey.StartNewSurvey"
+        android:label="start_new_survey_fragment"
+        tools:layout="@layout/start_new_survey_fragment" >
+        <action
+            android:id="@+id/action_startNewSurvey_to_homeScreen"
+            app:destination="@id/homeScreen" />
+        <action
+            android:id="@+id/action_startNewSurvey_to_observersWeather"
+            app:destination="@id/observersWeather" />
+        <argument
+            android:name="BeachDateTimeDataReturned"
+            app:argType="com.saliktariq.archelon.datalayer.parcelables.MorningSurveyBeachDateTime"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/observersWeather"
+        android:name="com.saliktariq.archelon.ui.newsurvey.ObserversWeather"
+        android:label="observers_weather_fragment"
+        tools:layout="@layout/observers_weather_fragment" >
+        <action
+            android:id="@+id/action_observersWeather_to_startNewSurvey"
+            app:destination="@id/startNewSurvey" />
+        <action
+            android:id="@+id/action_observersWeather_to_surveyHomeScreen"
+            app:destination="@id/surveyHomeScreen" />
+        <action
+            android:id="@+id/action_observersWeather_to_homeScreen"
+            app:destination="@id/homeScreen" />
+        <argument
+            android:name="StartNewSurveyData"
+            app:argType="com.saliktariq.archelon.datalayer.parcelables.MorningSurveyBeachDateTime"
+            app:nullable="true"
+         />
+    </fragment>
+    <fragment
+        android:id="@+id/surveyHomeScreen"
+        android:name="com.saliktariq.archelon.ui.msentrymainscreen.SurveyHomeScreen"
+        android:label="survey_home_screen_fragment"
+        tools:layout="@layout/survey_home_screen_fragment" >
+        <action
+            android:id="@+id/action_surveyHomeScreen_to_observersWeather"
+            app:destination="@id/observersWeather" />
+        <action
+            android:id="@+id/action_surveyHomeScreen_to_chooseEvent"
+            app:destination="@id/chooseEvent" />
+        <action
+            android:id="@+id/action_surveyHomeScreen_to_homeScreen"
+            app:destination="@id/homeScreen" />
+        <argument
+            android:name="MorningSurveyObserversWeather"
+            app:argType="com.saliktariq.archelon.datalayer.parcelables.MorningSurveyWithObserversWeather"
+            app:nullable="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/chooseEvent"
+        android:name="com.saliktariq.archelon.ui.neweventhome.ChooseEvent"
+        android:label="choose_event_fragment"
+        tools:layout="@layout/choose_event_fragment" >
+        <action
+            android:id="@+id/action_chooseEvent_to_surveyHomeScreen"
+            app:destination="@id/surveyHomeScreen" />
+        <action
+            android:id="@+id/action_chooseEvent_to_homeScreen"
+            app:destination="@id/homeScreen" />
+        <argument
+            android:name="MorningSurveyData"
+            app:argType="com.saliktariq.archelon.datalayer.parcelables.MorningSurveyWithObserversWeather"
+            app:nullable="true" />
+    </fragment>
+    <action android:id="@+id/action_global_homeScreen" app:destination="@id/homeScreen" />
+
+</navigation>

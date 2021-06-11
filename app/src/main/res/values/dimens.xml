@@ -1,0 +1,55 @@
+<resources>
+    <!-- Template -->
+
+    <dimen name="margin_normal">8dp</dimen>
+    <dimen name="margin_large">12dp</dimen>
+    <dimen name="margin_extra_large">16dp</dimen>
+    <dimen name="margin_extra_extra_large">24dp</dimen>
+    <dimen name="margin_ultra_larger">48dp</dimen>
+
+    <dimen name="padding_large">12dp</dimen>
+    <dimen name="padding_extra_large">16dp</dimen>
+    <dimen name="padding_ultra_larger">48dp</dimen>
+
+    <dimen name="text_size_normal">14sp</dimen>
+    <dimen name="text_size_large">16sp</dimen>
+    <dimen name="text_size_toolbar_title">18sp</dimen>
+    <dimen name="text_size_nav_title">24sp</dimen>
+
+    <dimen name="elevation_extra_small">2dp</dimen>
+    <dimen name="elevation_small">4dp</dimen>
+    <dimen name="elevation_large">12dp</dimen>
+
+    <!--Common-->
+    <dimen name="base_button_width">127dp</dimen>
+    <dimen name="base_button_height">40dp</dimen>
+
+    <!--Home-->
+
+
+    <!--Wizard-->
+
+    <!--List-->
+
+    <!--Card-->
+
+    <!--Parallax-->
+
+    <!--Image gallery-->
+
+    <!--Wizard-->
+
+    <!--Search-->
+
+    <!--Login-->
+    <dimen name="login_logo_size">80dp</dimen>
+
+    <!--Splash-->
+
+    <!--Small components-->
+    <dimen name="medium_size_width">76dp</dimen>
+    <dimen name="medium_size_height">40dp</dimen>
+
+    <!--Select-->
+
+</resources>

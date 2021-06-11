@@ -1,0 +1,134 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Archelon</string>
+    <string name="base_title"><b>Atom</b>UI</string>
+    <string name="app_full_title">The Sea Turtle\nProtection Society of\nGreece</string>
+    <string name="archelon_description">The Sea Turtle\nProtection Society of\nGreece</string>
+
+    <!--ImageView content descriptions-->
+    <string name="image_desc_icon">Icon</string>
+
+    <!--Left menu viewItems-->
+
+    <!--Home-->
+
+    <!--List Views-->
+
+    <!-- Image Gallery   -->
+
+    <!--Tabs-->
+
+    <!--Checkboxes-->
+
+    <!--Radio Buttons-->
+
+    <!--Search-->
+
+    <!--Parallax-->
+
+    <!--Login/Register/Forgot Password-->
+    <string name="app_title">ARCHELON</string>
+    <string name="email">Email</string>
+    <string name="first_name">First Name</string>
+    <string name="login_text_1">Don’t have an account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="forgot_pass">Forgot password?</string>
+    <string name="get_new">Get new</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="request_pass">Request Password</string>
+    <string name="new_pass">New Password</string>
+    <string name="repeat_pass">Repeat Password</string>
+    <string name="reset_pass">Reset Password</string>
+
+    <!--Wizard-->
+
+    <!--Toggle-->
+
+    <!--Small components-->
+    <string name="default_button">Default</string>
+
+    <!--Rtl + Color Change-->
+
+    <!--Splash Screen-->
+
+    <!--Range-->
+
+    <!--Select-->
+    <string name="ok">OK</string>
+
+    <!--Timeline-->
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="nest_check">Nest Check</string>
+
+    <string name="start_excavation">Start Excavation</string>
+    <string name="new_user_registration">New user registration</string>
+
+    <string name="archelonlogo">ArchelonLogo</string>
+    <string name="authorization_code">Authorization Code</string>
+    <string name="email_address">Email Address</string>
+    <string name="add_event">Add Event</string>
+
+    <string name="hatching">Hatching</string>
+    <string name="found_by_hatching">Found by Hatching</string>
+    <string name="inundation_wash">Inundation/Wash</string>
+    <string name="attempted_predation">Attempted/Predation</string>
+    <string name="found_by_predation">Found by Predation</string>
+    <string name="found_by_other">Found by Other</string>
+    <string name="vandalism">Vandalism</string>
+    <string name="other_event">Other Event</string>
+
+
+    <string name="logout">Logout</string>
+    <string name="choose_new_password">Choose new password</string>
+
+    <string name="logo">logo</string>
+
+    <string name="observers">Observers</string>
+    <string name="ms_leader">MS Leader</string>
+    <string name="_2nd_observer">2nd Observer</string>
+    <string name="_3rd_observer">3rd Observer</string>
+    <string name="_4th_observer">4th Observer</string>
+    <string name="weather">Weather</string>
+
+
+
+
+    <string name="start_new_survey">Start New Survey</string>
+    <string name="morning_survey">Morning Survey</string>
+    <string name="beach">Beach</string>
+    <string name="sector">Sector</string>
+    <string name="add_button">Add button</string>
+    <string name="start_a_new_morning_survey">Start a new morning survey</string>
+
+    <string name="start_survey">Start Survey</string>
+    <string name="morning_survey_home_screen">Morning Survey Home Screen</string>
+    <string name="add_new_event">Add New Event</string>
+    <string name="check_previous_entry">Check Previous Entry</string>
+    <string name="check_nests">Check Nests</string>
+    <string name="emergency_relocation">Emergency Relocation</string>
+    <string name="add_survey_remark">Add Survey Remark</string>
+    <string name="end_survey">End Survey</string>
+
+    <string name="forget_password">Forget password</string>
+    <string name="archelon">ARCHELON</string>
+    <string name="already_have_auth_code">Already have auth code?</string>
+    <string name="enter_reset_code">Enter reset code</string>
+
+    <string name="previous">Previous</string>
+
+    <string name="adult_emergence">Adult Emergence</string>
+    <string name="next">Next</string>
+    <string name="login">Login</string>
+    <string name="cancel_survey">Cancel Survey</string>
+    <string name="button_cancel_survey">Cancel Survey</string>
+    <string name="surf">Surf</string>
+    <string name="wind_direction">Wind Direction</string>
+    <string name="wind_intensity">Wind Intensity</string>
+    <string name="precipitation">Precipitation</string>
+    <string name="sky">Sky</string>
+
+
+</resources>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.firstscreen.ApplicationHomeScreenFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp"
+        app:layout_constraintBottom_toTopOf="@id/cardView"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/MainToolbarStyle"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:id="@+id/toolbarTitle"
+                style="@style/ToolbarTitleStyle"
+                android:layout_width="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/margin_ultra_larger"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/app_name" />
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        style="@style/BaseCardViewStyle"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="@dimen/elevation_small"
+        app:cardElevation="@dimen/elevation_extra_small"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="390dp"
+            android:padding="@dimen/padding_large">
+
+
+            <Button
+                android:id="@+id/btnStartNewSurvey"
+                style="@style/ButtonStyle"
+                android:layout_width="160dp"
+                android:text="@string/start_new_survey"
+                app:layout_constraintBottom_toTopOf="@+id/btnNestCheck"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnNestCheck"
+                style="@style/ButtonStyle"
+                android:layout_width="160dp"
+                android:text="@string/nest_check"
+                app:layout_constraintBottom_toTopOf="@+id/btnEmergencyRelocation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnStartNewSurvey"
+                tools:layout_editor_absoluteY="130dp" />
+
+            <Button
+                android:id="@+id/btnEmergencyRelocation"
+                style="@style/ButtonStyle"
+                android:layout_width="160dp"
+                android:text="@string/emergency_relocation"
+                app:layout_constraintBottom_toTopOf="@+id/btnStartExcavation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnNestCheck"
+                tools:layout_editor_absoluteY="212dp" />
+
+            <Button
+                android:id="@+id/btnStartExcavation"
+                style="@style/ButtonStyle"
+                android:layout_width="160dp"
+                android:text="@string/start_excavation"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnEmergencyRelocation"
+                tools:layout_editor_absoluteY="294dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="337dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <Button
+            android:id="@+id/btnLogOut"
+            style="@style/MediumSizeButtonStyle"
+
+            android:layout_width="96dp"
+            android:background="@drawable/rounded_button_dark_two"
+
+            android:text="@string/logout" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
