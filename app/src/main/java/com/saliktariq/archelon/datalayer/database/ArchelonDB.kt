@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.saliktariq.archelon.datalayer.dao.*
 import com.saliktariq.archelon.datalayer.entity.*
 
-@Database(entities = [Authentication::class, Photos::class, ActivitySequence::class, AdultEmergence::class,Location::class,MorningSurvey::class,Nest::class],version = 2, exportSchema = false)
+@Database(entities = [Authentication::class, Photos::class, ActivitySequence::class, AdultEmergence::class,Location::class,MorningSurvey::class,Nest::class],version = 3, exportSchema = false)
 abstract class ArchelonDB: RoomDatabase(){
     abstract val authenticationDao :AuthenticationAccessObject
     abstract val photosDao :PhotosAccessObject
